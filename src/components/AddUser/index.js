@@ -28,7 +28,7 @@ const AddUser = ({ photos, addPhotos }) => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid" data-testid="container-add">
       <h1 className="text-center text-dark py-3 display-2">Add Post</h1>
       <div className="row">
         <div className="col-md-6 p-5 mx-auto shadow">
@@ -74,4 +74,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
+export { AddUser as AddUserUnwrapped };
 export default connect(mapStateToProps, mapDispatchToProps)(AddUser);

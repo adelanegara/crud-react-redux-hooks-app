@@ -13,6 +13,7 @@ const Navbar = ({ isLogin, onLogout }) => {
             </Typography>
             {isLogin && (
               <Button
+                data-testid="button-logout"
                 style={{
                   textDecoration: "none",
                   backgroundColor: "#FFCE3F ",

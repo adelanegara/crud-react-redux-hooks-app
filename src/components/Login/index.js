@@ -44,7 +44,12 @@ const Login = ({ account, onLogin, setUserData }) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: "100vh" }}>
+      <Grid
+        container
+        component="main"
+        sx={{ height: "100vh" }}
+        data-testid="login"
+      >
         <CssBaseline />
         <Grid
           item
@@ -150,4 +155,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
+export { Login as LoginUnwrapped };
 export default connect(mapStateToProps, mapDispatchToProps)(Login);
