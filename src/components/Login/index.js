@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-// import { connect } from "react-redux";
 import { GlobalContext } from "../../Context/GlobalState";
 
 import {
@@ -143,20 +142,5 @@ const Login = ({}) => {
   );
 };
 
-// const mapStateToProps = (state) => ({
-//   account: state.account,
-// });
-
-// const mapDispatchToProps = (dispatch) => ({
-//   setUserData: (data) => {
-//     dispatch({ type: "SET_USER_DATA", payload: data });
-//   },
-//   onLogin: () => {
-//     dispatch({ type: "LOGIN" });
-//   },
-// });
-
 export { Login as LoginUnwrapped };
 export default Login();
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Login);

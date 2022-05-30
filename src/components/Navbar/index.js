@@ -1,8 +1,7 @@
-import React, { useContext } from "react"; // import { connect } from "react-redux";
+import React, { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
 import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 
-// const Navbar = ({ isLogin, onLogout }) => {
 const Navbar = ({}) => {
   const { isLogin, onLogout } = useContext(GlobalContext);
 
@@ -35,17 +34,6 @@ const Navbar = ({}) => {
     </div>
   );
 };
-// const mapStateToProps = (state) => ({
-//   isLogin: state.isLogin,
-// });
-
-// const mapDispatchToProps = (dispatch) => ({
-//   onLogout: () => {
-//     dispatch({ type: "LOGOUT" });
-//   },
-// });
 
 export { Navbar as NavbarUnwrapped };
 export default Navbar();
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

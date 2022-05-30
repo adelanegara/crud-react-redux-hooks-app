@@ -1,11 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
-// import { connect } from "react-redux";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-// const EditUser = ({ photos, updatePhotos }) => {
 const EditUser = ({}) => {
   const { photos, updatePhotos } = useContext(GlobalContext);
 
