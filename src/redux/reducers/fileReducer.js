@@ -4,15 +4,15 @@ const initialState = {
   userData: null,
   account: [
     {
-      email: "id@admin.com",
-      password: "admin",
+      email: "adela@admin.com",
+      password: "adela123",
       role: "admin",
       name: "Adela Admin",
       location: "New York",
     },
     {
       email: "adela@user.com",
-      password: "user",
+      password: "adela123",
       role: "user",
       name: "Adela User",
       location: "Tokyo",

@@ -13,7 +13,7 @@ const AddUser = ({ photos, addPhotos }) => {
     e.preventDefault();
 
     if (!title || !url) {
-      toast.success("Please fill in all fields!!");
+      toast.failed("Please fill in all fields!!");
     }
 
     const data = {
