@@ -1,13 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { connect } from "react-redux";
+import { GlobalContext } from "./Context/GlobalState";
 
-const PrivateRoute = ({ isLogin, component: Component }) => {
+const PrivateRoute = ({}) => {
+  const { isLogin, component: Component } = useContext(GlobalContext);
+
   return isLogin ? <Component /> : <Navigate to="/login" />;
 };
 
-const mapStateToProps = (state) => ({
-  isLogin: state.isLogin,
-});
-
-export default connect(mapStateToProps)(PrivateRoute);
+export default PrivateRoute();

@@ -1,9 +1,13 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
+import React, { useState, useContext } from "react";
+// import { connect } from "react-redux";
+import { GlobalContext } from "../../Context/GlobalState";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddUser = ({ photos, addPhotos }) => {
+// const AddUser = ({ photos, addPhotos }) => {
+const AddUser = ({}) => {
+  const { photos, addPhotos } = useContext(GlobalContext);
+
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
 
@@ -65,14 +69,16 @@ const AddUser = ({ photos, addPhotos }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  photos: state.photos,
-});
-const mapDispatchToProps = (dispatch) => ({
-  addPhotos: (data) => {
-    dispatch({ type: "ADD_PHOTOS", payload: data });
-  },
-});
+export default AddUser();
 
-export { AddUser as AddUserUnwrapped };
-export default connect(mapStateToProps, mapDispatchToProps)(AddUser);
+// const mapStateToProps = (state) => ({
+//   photos: state.photos,
+// });
+// const mapDispatchToProps = (dispatch) => ({
+//   addPhotos: (data) => {
+//     dispatch({ type: "ADD_PHOTOS", payload: data });
+//   },
+// });
+
+// export { AddUser as AddUserUnwrapped };
+// export default connect(mapStateToProps, mapDispatchToProps)(AddUser);

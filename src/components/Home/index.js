@@ -1,11 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState, useContext } from "react";
+import { GlobalContext } from "../../Context/GlobalState";
+// import { connect } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Home = ({ photos, deletePhotos, addPhotos, updatePhotos, userData }) => {
+// const Home = ({ photos, deletePhotos, addPhotos, updatePhotos, userData }) => {
+const Home = ({}) => {
+  const { photos, deletePhotos, addPhotos, updatePhotos, userData } =
+    useContext(GlobalContext);
   const [filterData, setFilterData] = useState([]);
   const navigate = useNavigate();
   const fetchData = async () => {
@@ -136,21 +139,23 @@ const Home = ({ photos, deletePhotos, addPhotos, updatePhotos, userData }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  photos: state.photos,
-  userData: state.userData,
-});
+export default Home();
 
-const mapDispatchToProps = (dispatch) => ({
-  deletePhotos: (id) => {
-    dispatch({ type: "DELETE_PHOTOS", payload: id });
-  },
-  addPhotos: (data) => {
-    dispatch({ type: "ADD_PHOTOS", payload: data });
-  },
-  updatePhotos: (data) => {
-    dispatch({ type: "UPDATE_PHOTOS", payload: data });
-  },
-});
+// const mapStateToProps = (state) => ({
+//   photos: state.photos,
+//   userData: state.userData,
+// });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+// const mapDispatchToProps = (dispatch) => ({
+//   deletePhotos: (id) => {
+//     dispatch({ type: "DELETE_PHOTOS", payload: id });
+//   },
+//   addPhotos: (data) => {
+//     dispatch({ type: "ADD_PHOTOS", payload: data });
+//   },
+//   updatePhotos: (data) => {
+//     dispatch({ type: "UPDATE_PHOTOS", payload: data });
+//   },
+// });
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Home);

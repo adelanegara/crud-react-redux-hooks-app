@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import React, { useEffect, useState, useContext } from "react";
+import { GlobalContext } from "../../Context/GlobalState";
+// import { connect } from "react-redux";
 import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const EditUser = ({ photos, updatePhotos }) => {
+// const EditUser = ({ photos, updatePhotos }) => {
+const EditUser = ({}) => {
+  const { photos, updatePhotos } = useContext(GlobalContext);
+
   const { id } = useParams();
   const navigate = useNavigate();
   const currentPhotos = photos.find((item) => item.id === parseInt(id));
@@ -85,13 +89,15 @@ const EditUser = ({ photos, updatePhotos }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  photos: state.photos,
-});
-const mapDispatchToProps = (dispatch) => ({
-  updatePhotos: (data) => {
-    dispatch({ type: "UPDATE_PHOTOS", payload: data });
-  },
-});
+export default EditUser();
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
+// const mapStateToProps = (state) => ({
+//   photos: state.photos,
+// });
+// const mapDispatchToProps = (dispatch) => ({
+//   updatePhotos: (data) => {
+//     dispatch({ type: "UPDATE_PHOTOS", payload: data });
+//   },
+// });
+
+// export default connect(mapStateToProps, mapDispatchToProps)(EditUser);

@@ -1,22 +1,25 @@
-import * as React from "react";
-import { connect } from "react-redux";
+import React, { useContext } from "react"; // import { connect } from "react-redux";
+import { GlobalContext } from "../../Context/GlobalState";
 import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 
-const Navbar = ({ isLogin, onLogout }) => {
+// const Navbar = ({ isLogin, onLogout }) => {
+const Navbar = ({}) => {
+  const { isLogin, onLogout } = useContext(GlobalContext);
+
   return (
     <div>
       <Box sx={{ flexGrow: 1 }} data-testid="navbar">
         <AppBar sx={{ bgcolor: "#06304B", p: "10px" }} position="static">
           <Toolbar>
             <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-              BANK ABC{" "}
+              context api{" "}
             </Typography>
             {isLogin && (
               <Button
                 data-testid="button-logout"
                 style={{
                   textDecoration: "none",
-                  backgroundColor: "#FFCE3F ",
+                  backgroundColor: "red ",
                   padding: "8px 12px",
                   fontWeight: "bold",
                   color: "#0094b6",
@@ -32,15 +35,17 @@ const Navbar = ({ isLogin, onLogout }) => {
     </div>
   );
 };
-const mapStateToProps = (state) => ({
-  isLogin: state.isLogin,
-});
+// const mapStateToProps = (state) => ({
+//   isLogin: state.isLogin,
+// });
 
-const mapDispatchToProps = (dispatch) => ({
-  onLogout: () => {
-    dispatch({ type: "LOGOUT" });
-  },
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   onLogout: () => {
+//     dispatch({ type: "LOGOUT" });
+//   },
+// });
 
 export { Navbar as NavbarUnwrapped };
-export default connect(mapStateToProps, mapDispatchToProps)(Navbar);
+export default Navbar();
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

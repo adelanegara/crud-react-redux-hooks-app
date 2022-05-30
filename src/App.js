@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { GlobalProvider } from "./Context/GlobalState";
 import { ToastContainer } from "react-toastify";
 import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
@@ -12,7 +13,8 @@ import "./styles.css";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      {/* <GlobalProvider> */}
+      <Router>
         <div>
           <Navbar />
           <ToastContainer />
@@ -26,7 +28,8 @@ function App() {
             element={<PrivateRoutes component={EditUser} />}
           />
         </Routes>
-      </BrowserRouter>
+      </Router>
+      {/* </GlobalProvider> */}
     </div>
   );
 }

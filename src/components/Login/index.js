@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
+import { GlobalContext } from "../../Context/GlobalState";
 
 import {
   Avatar,
@@ -17,11 +18,11 @@ import {
 } from "@mui/material";
 
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
-// import Typography from "@mui/material/Typography";
-// import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { toast } from "react-toastify";
 
-const Login = ({ account, onLogin, setUserData }) => {
+// const Login = ({ account, onLogin, setUserData }) => {
+const Login = ({}) => {
+  const { account, onLogin, setUserData } = useContext(GlobalContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const theme = createTheme();
@@ -142,18 +143,20 @@ const Login = ({ account, onLogin, setUserData }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  account: state.account,
-});
+// const mapStateToProps = (state) => ({
+//   account: state.account,
+// });
 
-const mapDispatchToProps = (dispatch) => ({
-  setUserData: (data) => {
-    dispatch({ type: "SET_USER_DATA", payload: data });
-  },
-  onLogin: () => {
-    dispatch({ type: "LOGIN" });
-  },
-});
+// const mapDispatchToProps = (dispatch) => ({
+//   setUserData: (data) => {
+//     dispatch({ type: "SET_USER_DATA", payload: data });
+//   },
+//   onLogin: () => {
+//     dispatch({ type: "LOGIN" });
+//   },
+// });
 
 export { Login as LoginUnwrapped };
-export default connect(mapStateToProps, mapDispatchToProps)(Login);
+export default Login();
+
+// export default connect(mapStateToProps, mapDispatchToProps)(Login);
