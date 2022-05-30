@@ -1,0 +1,39 @@
+{
+  "transcation": [
+    {
+      "id": 1,
+      "accountNumber": 34568,
+      "accountName": "Adela",
+      "accountType": "Saving",
+      "accountBalance": "5000"
+    },
+    {
+      "id": 2,
+      "accountNumber": 23454,
+      "accountName": "Jessica",
+      "accountType": "Saving",
+      "accountBalance": "1200"
+    },
+    {
+      "id": 3,
+      "accountNumber": 76543,
+      "accountName": "Benjamin",
+      "accountType": "Saving",
+      "accountBalance": "7630"
+    },
+    {
+      "id": 4,
+      "accountNumber": 72342,
+      "accountName": "Peder",
+      "accountType": "Saving",
+      "accountBalance": "7500"
+    },
+    {
+      "id": 5,
+      "accountNumber": 23454,
+      "accountName": "John",
+      "accountType": "Current",
+      "accountBalance": "200"
+    }
+  ]
+}

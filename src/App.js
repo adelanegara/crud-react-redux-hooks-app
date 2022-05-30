@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
 import Home from "./components/Home";
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <div>
           <Navbar />
+          <ToastContainer />
         </div>
         <Routes>
           <Route path="/login" element={<Login />} />
