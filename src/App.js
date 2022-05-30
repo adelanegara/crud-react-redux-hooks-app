@@ -1,31 +1,30 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddUser from "./components/AddUser";
 import EditUser from "./components/EditUser";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Navbar from "./components/Navbar";
-// import PrivateRoutes from "./PrivateRoutes";
+import PrivateRoutes from "./PrivateRoutes";
 
 import "./styles.css";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <BrowserRouter>
         <div>
           <Navbar />
         </div>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route path="/add" element={<AddUser />}>
-            {" "}
-          </Route>
-          <Route path="/edit/:id" element={<EditUser />}>
-            {" "}
-          </Route>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<PrivateRoutes component={Home} />} />
+          <Route path="/add" element={<PrivateRoutes component={AddUser} />} />
+          <Route
+            path="/edit/:id"
+            element={<PrivateRoutes component={EditUser} />}
+          />
         </Routes>
-      </Router>
+      </BrowserRouter>
     </div>
   );
 }
