@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from "react";
-import { fileReducer } from "./reducers/fileReducer";
+import fileReducer from "./reducers/fileReducer";
 
 const initialState = {
   photos: [],
