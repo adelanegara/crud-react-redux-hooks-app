@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
 import { GlobalContext } from "./Context/GlobalState";
 
-const PrivateRoute = () => {
-  const { isLogin, component: Component } = useContext(GlobalContext);
+const PrivateRoute = ({ component: Component }) => {
+  const { isLogin } = useContext(GlobalContext);
 
   return isLogin ? <Component /> : <Navigate to="/login" />;
 };
