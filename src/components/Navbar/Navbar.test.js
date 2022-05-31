@@ -13,11 +13,11 @@ test("test navbar", () => {
 });
 
 test("Test title ABC Bank", () => {
-  const wrapper = screen.getByText(/BANK ABC/);
+  const wrapper = screen.getByText(/context api/);
   expect(wrapper).toBeInTheDocument();
 });
 
 test("Test title ABC Bank", () => {
-  const wrapper = screen.getByText(/BANK ABC/);
+  const wrapper = screen.getByText(/context api/);
   expect(wrapper).toMatchSnapshot();
 });
