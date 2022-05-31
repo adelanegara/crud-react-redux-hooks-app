@@ -50,6 +50,9 @@ export const GlobalProvider = ({ children }) => {
   const updatePhotos = (data) => {
     dispatch({ type: "UPDATE_PHOTOS", payload: data });
   };
+  const onLogin = () => {
+    dispatch({ type: "LOGIN" });
+  };
 
   return (
     <GlobalContext.Provider
@@ -63,6 +66,7 @@ export const GlobalProvider = ({ children }) => {
         deletePhotos,
         addPhotos,
         updatePhotos,
+        onLogin,
       }}
     >
       {children}
