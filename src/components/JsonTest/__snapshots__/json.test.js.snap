@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome text test 1`] = `
+Array [
+  Object {
+    "albumId": 1,
+    "id": 1,
+    "thumbnailUrl": "https://via.placeholder.com/150/92c952",
+    "title": "testing1",
+    "url": "https://via.placeholder.com/600/92c952",
+  },
+  Object {
+    "albumId": 1,
+    "id": 2,
+    "thumbnailUrl": "https://via.placeholder.com/150/771796",
+    "title": "testing2",
+    "url": "https://via.placeholder.com/600/771796",
+  },
+  Object {
+    "albumId": 1,
+    "id": 3,
+    "thumbnailUrl": "https://via.placeholder.com/150/24f355",
+    "title": "testing3",
+    "url": "https://via.placeholder.com/600/24f355",
+  },
+  Object {
+    "albumId": 1,
+    "id": 4,
+    "thumbnailUrl": "https://via.placeholder.com/150/d32776",
+    "title": "testing4",
+    "url": "https://via.placeholder.com/600/d32776",
+  },
+]
+`;

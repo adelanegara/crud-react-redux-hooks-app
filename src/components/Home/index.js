@@ -153,4 +153,5 @@ const mapDispatchToProps = (dispatch) => ({
   },
 });
 
+export { Home as HomeUnwrapped };
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
