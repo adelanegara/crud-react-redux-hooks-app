@@ -70,7 +70,7 @@ const Home = () => {
               </p>
             )}
           </div>
-          {userData.role === "admin" && (
+          {userData.role == "admin" && (
             <div className="mb-2 mt-2">
               <button
                 onClick={() => navigate("/add")}
@@ -93,7 +93,7 @@ const Home = () => {
                 <th scope="col">Id</th>
                 <th scope="col">Title</th>
                 <th scope="col">Photos</th>
-                {userData.role === "admin" && <th scope="col">Action</th>}
+                {userData.role == "admin" && <th scope="col"> Action</th>}
               </tr>
             </thead>
             <tbody>
@@ -105,7 +105,7 @@ const Home = () => {
                     <td>
                       <img src={photos.url} className="photos" />
                     </td>
-                    {userData.role === "admin" && (
+                    {userData.role == "admin" && (
                       <td className="d-flex flex-row">
                         <Link
                           to={`/edit/${photos.id}`}
