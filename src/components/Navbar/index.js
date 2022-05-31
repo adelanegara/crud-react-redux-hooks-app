@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../Context/GlobalState";
 import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 
-const Navbar = ({}) => {
+const Navbar = () => {
   const { isLogin, onLogout } = useContext(GlobalContext);
 
   return (
@@ -36,4 +36,4 @@ const Navbar = ({}) => {
 };
 
 export { Navbar as NavbarUnwrapped };
-export default Navbar();
+export default Navbar;

@@ -3,7 +3,7 @@ import { GlobalContext } from "../../Context/GlobalState";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const AddUser = ({}) => {
+const AddUser = () => {
   const { photos, addPhotos } = useContext(GlobalContext);
 
   const [title, setTitle] = useState("");
@@ -67,16 +67,4 @@ const AddUser = ({}) => {
   );
 };
 
-export default AddUser();
-
-// const mapStateToProps = (state) => ({
-//   photos: state.photos,
-// });
-// const mapDispatchToProps = (dispatch) => ({
-//   addPhotos: (data) => {
-//     dispatch({ type: "ADD_PHOTOS", payload: data });
-//   },
-// });
-
-// export { AddUser as AddUserUnwrapped };
-// export default connect(mapStateToProps, mapDispatchToProps)(AddUser);
+export default AddUser;

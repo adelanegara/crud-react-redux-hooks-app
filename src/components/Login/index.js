@@ -20,7 +20,7 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import { toast } from "react-toastify";
 
 // const Login = ({ account, onLogin, setUserData }) => {
-const Login = ({}) => {
+const Login = () => {
   const { account, onLogin, setUserData } = useContext(GlobalContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -143,4 +143,4 @@ const Login = ({}) => {
 };
 
 export { Login as LoginUnwrapped };
-export default Login();
+export default Login;

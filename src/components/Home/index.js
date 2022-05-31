@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Home = ({}) => {
+const Home = () => {
   const { photos, deletePhotos, addPhotos, updatePhotos, userData } =
     useContext(GlobalContext);
   const [filterData, setFilterData] = useState([]);
@@ -137,4 +137,4 @@ const Home = ({}) => {
   );
 };
 
-export default Home();
+export default Home;

@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-const EditUser = ({}) => {
+const EditUser = () => {
   const { photos, updatePhotos } = useContext(GlobalContext);
 
   const { id } = useParams();
@@ -87,15 +87,4 @@ const EditUser = ({}) => {
   );
 };
 
-export default EditUser();
-
-// const mapStateToProps = (state) => ({
-//   photos: state.photos,
-// });
-// const mapDispatchToProps = (dispatch) => ({
-//   updatePhotos: (data) => {
-//     dispatch({ type: "UPDATE_PHOTOS", payload: data });
-//   },
-// });
-
-// export default connect(mapStateToProps, mapDispatchToProps)(EditUser);
+export default EditUser;
