@@ -3,7 +3,7 @@
     {
       "id": 1,
       "accountNumber": 34568,
-      "accountName": "Adela",
+      "accountName": "Lala",
       "accountType": "Saving",
       "accountBalance": "5000"
     },
@@ -17,14 +17,14 @@
     {
       "id": 3,
       "accountNumber": 76543,
-      "accountName": "Benjamin",
+      "accountName": "Benin",
       "accountType": "Saving",
       "accountBalance": "7630"
     },
     {
       "id": 4,
       "accountNumber": 72342,
-      "accountName": "Peder",
+      "accountName": "Pase",
       "accountType": "Saving",
       "accountBalance": "7500"
     },
